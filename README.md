@@ -1,6 +1,6 @@
 
 
-````markdown
+
 # GitKuroKali — Telegram Remote Pentest Utility
 
 GitKuroKali adalah bot Telegram berbasis Python untuk menjalankan command pentesting dan utilitas sistem secara remote melalui Telegram.  
