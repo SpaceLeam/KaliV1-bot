@@ -1,7 +1,4 @@
-Siap, ini **README.md** versi padat, jelas, dan tidak alay.
-Silakan edit kalau perlu tambahan branding.
 
----
 
 ## GitKuroKali — Telegram Remote Pentest Utility
 
@@ -127,9 +124,6 @@ Jika berhasil berjalan, bot aktif dan siap menerima command.
 Gunakan script ini **hanya pada environment legal dan milik sendiri**.
 Segala penyalahgunaan berada di luar tanggung jawab pembuat.
 
----
-
-Kalau mau, gue bisa tambahin:
 
 * installer otomatis (bash install)
 * auto detect tools missing
