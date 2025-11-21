@@ -1,38 +1,36 @@
 
 
-## 📄 README.md
-
 ````markdown
 # GitKuroKali — Telegram Remote Pentest Utility
 
-Script ini adalah bot Telegram berbasis Python yang memungkinkan eksekusi command pentesting dan utilitas sistem secara remote melalui Telegram.  
-Direkomendasikan untuk dijalankan di **Kali Linux** atau distro Linux lain yang mendukung tools security.
+GitKuroKali adalah bot Telegram berbasis Python untuk menjalankan command pentesting dan utilitas sistem secara remote melalui Telegram.  
+Direkomendasikan untuk dijalankan di **Kali Linux** (atau distro Linux lain yang mendukung security tools).
 
 ---
 
 ## ⚙️ Fitur Utama
 - Navigasi filesystem (`/ls`, `/cd`, `/download`)
-- Nmap scanning
-- CURL HTTP request
-- SearchSploit query
-- DNS lookup
+- Port scanning menggunakan Nmap
+- HTTP request dengan CURL
+- Pencarian exploit menggunakan SearchSploit
+- DNS resolver
 - Subdomain enumeration (Subfinder / Assetfinder)
 - SSL/TLS scanning (sslscan)
 - HTTP probing (httpx)
-- System info (`screenfetch`)
+- System information (`screenfetch`)
 
 ---
 
 ## 📦 Installation
 
-### Clone repo & install dependencies
+### Clone repository & install dependencies
 ```bash
 git clone <repo-url>
 cd <folder>
 pip install -r requirements.txt
 ````
 
-### Requirements Python
+### Python Requirements
 
 ```
 python-telegram-bot==21.3
@@ -51,13 +49,13 @@ go install -v github.com/projectdiscovery/httpx/cmd/httpx@latest
 go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
 ```
 
-Asset finder:
+Assetfinder:
 
 ```bash
 go install github.com/tomnomnom/assetfinder@latest
 ```
 
-Add to PATH:
+Tambahkan PATH:
 
 ```bash
 export PATH=$PATH:$(go env GOPATH)/bin
@@ -67,13 +65,13 @@ export PATH=$PATH:$(go env GOPATH)/bin
 
 ## 🔐 Konfigurasi Bot Telegram
 
-Buat bot via **BotFather**
+Buat bot melalui **BotFather**
 
 ```
 /newbot
 ```
 
-Copy **Bot Token**, lalu edit file:
+Edit konfigurasi pada script:
 
 ```python
 BOT_TOKEN = "TOKEN DARI BOTFATHER"
@@ -84,8 +82,9 @@ ALLOWED_CHAT = [123456789]  # chat id yang diperbolehkan
 
 1. Buka Telegram
 2. Cari bot **@userinfobot**
-3. `/start` → muncul `id: 123456789`
-4. Masukkan ke `ALLOWED_CHAT`
+3. Jalankan `/start`
+4. Akan muncul informasi `id: 123456789`
+5. Masukkan ID tersebut ke dalam `ALLOWED_CHAT`
 
 ---
 
@@ -108,10 +107,10 @@ python GitKuroKali_v1.py
 | `/nmap <mode> <target>`        | Port scanning      |
 | `/curl <url>`                  | HTTP request       |
 | `/searchsploit <keyword>`      | Cari exploit       |
-| `/dns <domain>`                | DNS resolver       |
+| `/dns <domain>`                | DNS lookup         |
 | `/subfinder <mode> <domain>`   | Subdomain scan     |
 | `/assetfinder <mode> <domain>` | Asset discovery    |
-| `/sslscan <mode> <target>`     | SSL Security Check |
+| `/sslscan <mode> <target>`     | SSL security check |
 | `/httpx <mode> <target>`       | HTTP probing       |
 | `/screenfetch`                 | System info        |
 
@@ -126,5 +125,9 @@ python GitKuroKali_v1.py
 
 ## ⚠️ Disclaimer
 
-Gunakan hanya untuk testing legal di environment sendiri.
-Segala bentuk penyalahgunaan di luar tanggung jawab pembuat.
+Gunakan script ini **hanya untuk tujuan legal** dan pada environment yang sepenuhnya Anda miliki.
+Segala bentuk penyalahgunaan merupakan tanggung jawab masing-masing pengguna.
+
+```
+
+---
